@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import {Box} from '../styles/box';
 import Chart from 'react-apexcharts';
 import { useTheme } from '@nextui-org/react';
+import prisma from '@/libs/prismadb'
 
 interface usetage {
     month: number[],
     total: number[]
 }
+
 
 export const Steam = () => {
 
