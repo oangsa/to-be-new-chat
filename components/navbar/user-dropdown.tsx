@@ -2,7 +2,6 @@ import {Avatar, Dropdown, Link, Navbar, Text} from '@nextui-org/react';
 import React from 'react';
 import {DarkModeSwitch} from './darkmodeswitch';
 import { usePathname, useRouter } from 'next/navigation';
-import logout from '@/libs/logoutHandler';
 import { deleteCookie } from 'cookies-next';
 import { Inter, Kanit } from 'next/font/google'
 const kanit = Kanit({ subsets: ['latin', 'thai'], weight: '400' })
