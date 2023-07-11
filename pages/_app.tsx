@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { NextUIProvider } from '@nextui-org/react';
+import { AppProps } from 'next/app';
+import "@/styles/globals.css"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { Layout } from '@/components/layout/layout';
+import { Inter, Kanit } from 'next/font/google'
+const kanit = Kanit({ subsets: ['latin', 'thai'], weight: '400' })
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <main className={kanit.className}>
+      <NextUIProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </NextUIProvider>
+    </main>
+    
+  );
 }
+
+export default MyApp;

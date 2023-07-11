@@ -1,0 +1,15 @@
+export interface studentData {
+    id: string,
+    name: string,
+    surname: string,
+    studentId: number,
+    yearClass: number,
+    Class: number,
+    reason: string,
+    total: number,
+    oldMonth: number,
+    timestamps: Date,
+    username: string,
+    password: string,
+    image: string,
+}
