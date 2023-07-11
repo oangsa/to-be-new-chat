@@ -1,6 +1,6 @@
 import { Card, Col, Container, Row, Table, Tooltip } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import { IconButton } from "./table.styled";
+import { IconButton } from "../../styles/table.styled";
 import { DeleteIcon } from "@/components/icons/table/delete";
 import Swal from "sweetalert2";
 import EditUser from "@/components/users/editUser";

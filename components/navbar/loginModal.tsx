@@ -2,7 +2,7 @@ import { useRouter } from 'next/navigation'
 import React, { ChangeEvent, useState } from 'react'
 import loginHandler from '@/libs/loginHandler'
 import { Button, Container, Input, Loading, Modal } from '@nextui-org/react';
-import { IconButton } from '@/pages/admin/table.styled'
+import { IconButton } from '@/styles/table.styled'
 import Swal from 'sweetalert2'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context'
 import { Inter, Kanit } from 'next/font/google'

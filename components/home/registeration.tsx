@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from 'react'
 import { Modal, Button, Input, Row, Container, Col, Spacer, Loading } from "@nextui-org/react";
-import { IconButton } from '@/pages/admin/table.styled';
+import { IconButton } from '@/styles/table.styled';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { Inter, Kanit } from 'next/font/google'

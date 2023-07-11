@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useEffect, useState} from 'react'
 import { Modal, Button, Input, Row, Container, Col, Spacer } from "@nextui-org/react";
-import { IconButton } from '@/pages/admin/table.styled';
+import { IconButton } from '@/styles/table.styled';
 import { EditIcon } from '../icons/table/edit';
 import Swal from 'sweetalert2';
 import { studentData } from '@/type';
