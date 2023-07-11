@@ -29,7 +29,7 @@ export const Content = () => {
    })
 
    const getD = async () => {
-      const res = await fetch("/api/usetage/getUsetage")
+      const res = await fetch("/api/usetage/getUsetage", { next: { revalidate: 5 } })
       const data = await res.json()
       await setData(data)
    }
