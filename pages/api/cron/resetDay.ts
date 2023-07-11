@@ -5,12 +5,12 @@ import prisma from '@/libs/prismadb'
 export default async function resetDay(req: NextApiRequest, res: NextApiResponse ) {
     try {
 
-        const res = await prisma.count.findFirst({})
+        const response = await prisma.count.findFirst({})
 
         await prisma.count.updateMany({
             data: {
                 curDay: 0,
-                oldDay: res?.curDay
+                oldDay: response?.curDay
             }
         })
         
