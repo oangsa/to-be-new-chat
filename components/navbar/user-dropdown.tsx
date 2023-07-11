@@ -45,7 +45,7 @@ export const UserDropdown = ({image, name}: props) => {
                </Text>
             </Dropdown.Item>
             <Dropdown.Item className={kanit.className} key="settings" withDivider>
-               <Link color={'text'} href='/settings'>
+               <Link color={'text'} href='/setting'>
                   ตั้งค่า
                </Link>
             </Dropdown.Item>
