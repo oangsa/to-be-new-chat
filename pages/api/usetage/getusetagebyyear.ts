@@ -22,20 +22,39 @@ export default async function getUsetageByYear(req: NextApiRequest, res: NextApi
         ],
     })
 
-    result.map((item: any) => {
+    // result.map((item: any) => {
+    //     if (item.yearClass !== old) {
+    //         data.month.push(month)
+    //         data.total.push(total)
+    //         month = 0
+    //         total = 0
+    //         old = old + 1
+    //         return
+    //     }
+    //     month = month + item.oldMonth,
+    //     total = total + item.total
+    // })
+    // data.month.push(month)
+    // data.total.push(total)
+
+    for (let i = 0; i < result.length; i++) {
+        const item = result[i];
+        
         if (item.yearClass !== old) {
-            data.month.push(month)
-            data.total.push(total)
-            month = 0
-            total = 0
-            old = old + 1
-            return
+            data.month.push(month);
+            data.total.push(total);
+            month = 0;
+            total = 0;
+            old = old + 1;
+            continue;
         }
-        month = month + item.oldMonth,
-        total = total + item.total
-    })
-    data.month.push(month)
-    data.total.push(total)
-    console.log(data)
+        
+        month += item.oldMonth;
+        total += item.total;
+    }
+    
+    data.month.push(month);
+    data.total.push(total);
+
     return res.status(200).send(data)
 }
