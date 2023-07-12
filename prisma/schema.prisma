@@ -84,4 +84,7 @@ model Count {
   oldDay Int?
   oldMonth Int?
 
+  graphToTal Int[]
+  graphMonth Int[]
+
 }

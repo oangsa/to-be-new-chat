@@ -26,6 +26,12 @@ export default async function sendData(req: NextApiRequest, res: NextApiResponse
             timestamps: new Date()
         }
     })
+    
+    var uptMonth = oldCount.graphMonth
+    uptMonth[(oldData.yearClass - 1).toString()] = uptMonth[(oldData.yearClass - 1).toString()] + 1
+    var uptTotal = oldCount.graphToTal
+    uptTotal[(oldData.yearClass - 1).toString()] = uptTotal[(oldData.yearClass - 1).toString()] + 1
+
     const updateCount = await prisma.count.update({
         where: {
             id: oldCount.id
@@ -34,6 +40,8 @@ export default async function sendData(req: NextApiRequest, res: NextApiResponse
             curDay: oldCount.curDay + 1,
             curMonth: oldCount.curMonth + 1,
             curTotal: oldCount.curTotal + 1,
+            graphMonth: uptMonth,
+            graphToTal: uptTotal
         }
     })
     console.log(updateCount)
